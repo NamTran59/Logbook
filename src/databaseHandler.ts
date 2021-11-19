@@ -1,4 +1,5 @@
 import { openDB } from 'idb'
+import { Entry } from './models';
 
 const DATABASE_NAME = "RENTALZDB";
 
@@ -21,7 +22,7 @@ async function initDB() {
   });
 }
 
-export async function insertEntry(entry: any) {
+export async function insertEntry(entry: Entry) {
   const db = await openDB(DATABASE_NAME, 1)
   const tx = db.transaction('entry', 'readwrite');
   const store = tx.objectStore('entry');
