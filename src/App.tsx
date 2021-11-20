@@ -40,11 +40,8 @@ const App: React.FC = () => (
         </Route>
       </IonRouterOutlet>
       <IonTabBar slot="bottom">
-        <IonTabButton tab="addproperty" href="/addproperty">
-        <IonIcon icon={addCircleOutline}/>Add Property
-        </IonTabButton>
-        <IonTabButton tab="nativefunctions" href="/nativefunctions">
-        <IonIcon icon={hammerOutline}/>Native Functions</IonTabButton>
+        <IonTabButton tab="addproperty" href="/addproperty">Add Property</IonTabButton>
+        <IonTabButton tab="nativefunctions" href="/nativefunctions">Native Functions</IonTabButton>
       </IonTabBar>
       </IonTabs>
     </IonReactRouter>

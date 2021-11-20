@@ -9,7 +9,7 @@ import { insertEntry } from '../databaseHandler';
 const AddProperty: React.FC = () => {
   const [property, setProperty] = useState('')
   const [bedroom, setBedroom] = useState('')
-  const [date] = useState(new Date().toISOString())
+  const [date, setDate] = useState(new Date().toISOString())
   const [price, setPrice] = useState('')
   const [furniture, setFurniture] = useState('')
   const [note, setNotes] = useState('')
@@ -57,7 +57,7 @@ const AddProperty: React.FC = () => {
         </IonItem>
         <IonItem>
           <IonLabel position="stacked">Date (*)</IonLabel>
-          <IonDatetime readonly={true} value={date}/>
+          <IonDatetime value={date} onIonChange={event => setDate(event.detail.value!)}></IonDatetime>
         </IonItem>
         <IonItem>
           <IonLabel position="stacked">Monthly Rent Price (*)</IonLabel>
