@@ -17,15 +17,15 @@ const AddProperty: React.FC = () => {
   const [present] = useIonToast()
 
   const registerClick = async () => {
+
     const newEntry = { property: property, bedroom: bedroom, date: date, price: price, furniture: furniture, note: note, reporter: reporter };
 
     if (!property || !bedroom || !date || !price || !reporter) {
       present("Please enter in the required field", 2000);
     }
-
     else {
       insertEntry(newEntry);
-      present("Finished", 2000);
+      present("Property has been added successfully", 2000);
     }
   }
 
